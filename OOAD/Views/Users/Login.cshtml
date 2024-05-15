@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <label asp-for="UserName">Tên người dùng:</label>
+                <input asp-for="UserName" class="form-control">
+                <span asp-validation-for="UserName" class=" text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Mật khẩu:</label>
+                <input asp-for="Password" type="password" class="form-control">
+                <span asp-validation-for="Password" class="text text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        </form>
+
+    </div>
+</body>
+
+
